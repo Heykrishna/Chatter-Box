@@ -13,9 +13,6 @@ function Feed() {
   const { storyList, currentUserStory } = useSelector((state) => state.story);
   const navigate = useNavigate();
   return (
-
-
-    
     <div className="lg:w-[50%] w-full bg-black min-h-[100vh]   lg:h-[100vh] relative lg:overflow-y-auto ">
       <div className="w-full h-[100px] flex items-center justify-between p-[20px] lg:hidden">
         <img src={logo} alt="" className="w-[80px]" />
@@ -57,6 +54,8 @@ function Feed() {
         {postData &&
           postData.map((post, index) => <Post post={post} key={index} />)}
       </div>
+
+      
     </div>
   );
 }
